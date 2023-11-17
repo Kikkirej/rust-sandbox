@@ -1,0 +1,60 @@
+= Adding Numbers
+
+Example for Variables
+
+basic example is in numbers-1.rs:
+
+[,rust]
+----
+include::numbers-1.rs[]
+----
+
+new variables are initaised with let. `result` can not be set again because rust-variables are always immutable. So compilers are warning.
+
+To get rid of this problem a new variable with the same name is created. This is called shadowing.
+
+This looks like in `numbers-2.rs`:
+[,rust]
+----
+include::numbers-2.rs[]
+----
+
+Alternative is to make result mutable. While variable creation this can be done by `let mut <varname>`. This is done in numbers-3.rs
+
+[,rust]
+----
+include::numbers-3.rs[]
+----
+
+== Datatypes
+
+Like other languages every variable has a type. Rust compiler needs to know for every variable what type it is. Like in the two added numbers it is clear the datatype of result is also a number.
+
+Type can also be set while variable creation. For example would this be a 8 bit integer, which is marked with `u8`, like in numbers-4.rs shown. 
+[,rust]
+----
+include::numbers-4.rs[]
+----
+u means unsigned in this case.
+
+Rust is so a type specific programming language. 
+Basic types are listed in the https://doc.rust-lang.org/book/ch03-02-data-types.html[documentation].
+
+floating and integer numbers are not going as well as in Java. So an integer might be casted to a 32 bit float with `2 as f32`.
+
+Strings, Booleans and characters are like Java.
+
+unused variables are a warning in rust, but not an error.
+
+== Constants
+
+Constants are like inmutable variables. They are having some differences:
+
+* type needs always to be defined 
+* only constant values can be assigned --> result needs to be clear while compilation
+* constants can be defined everywhere
+
+[source, rust]
+----
+include::const.rs[]
+----

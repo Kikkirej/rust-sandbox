@@ -1,0 +1,35 @@
+== Hello World example
+
+Some bullet-points regarding it:
+
+* main function is always executed code when started the program
+* println is obvious. 
+* rs file ending is not necessary, but usual
+
+All logic in hello.rs:
+[,rust]
+----
+include::hello.rs[]
+----
+
+While compilation to files are dropping out.
+
+* the executable - hello.exe
+* https://docs.rs/pdb/latest/pdb/[debugging information] - hello.pdb
+
+Compilation is done with `rustc hello.rs` or `rustc hello-rs -o world`. Always compiled for the base system. So 
+
+[source, bash]
+----
+$ .\hello.exe  
+Hello world!
+----
+
+== rusfmt
+
+Corrects formatting of the file like spaces, empty lines and Co. to the default.
+
+[source, bash]
+----
+$ rustfmt hello.rs
+----
